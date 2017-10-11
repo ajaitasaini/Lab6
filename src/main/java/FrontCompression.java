@@ -41,9 +41,8 @@ public class FrontCompression {
             return "";
         }
 
-        /*
-         * Complete this function.
-         */
+        String[] corpusSplit = corpus.split("\\s+");
+
 
         return "";
     }
@@ -79,9 +78,36 @@ public class FrontCompression {
      * @return the length of the common prefix between the two strings
      */
     private static int longestPrefix(final String firstString, final String secondString) {
-        /*
-         * Complete this function.
-         */
+        int lenFirst = firstString.length();
+        int lenSecond = secondString.length();
+        char[] firstStringArr = firstString.toCharArray();
+        char[] secondStringArr = secondString.toCharArray();
+        int counter = 0;
+
+        if (lenFirst > lenSecond) {
+            for (int i = 0; i < lenSecond; i++) {
+                if (firstStringArr[i] == secondStringArr[i]) {
+                    counter++;
+                }
+                else {
+                    break;
+                }
+            }
+        }
+
+        else {
+            for (int i = 0; i < lenFirst; i++) {
+                if (firstStringArr[i] == secondStringArr[i]) {
+                    counter++;
+                }
+                else {
+                    break;
+                }
+            }
+        }
+
+
+
         return 0;
     }
 
